@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tallies>
+  <mesh id="1">
+    <dimension>7 7</dimension>
+    <lower_left>-74.9581 -74.9581</lower_left>
+    <upper_right>74.9581 74.9581</upper_right>
+  </mesh>
+  <mesh id="2">
+    <dimension>119 119</dimension>
+    <lower_left>-74.9581 -74.9581</lower_left>
+    <upper_right>74.9581 74.9581</upper_right>
+  </mesh>
+  <mesh id="3" type="rectilinear">
+    <x_grid>-74.9581 74.9581</x_grid>
+    <y_grid>-74.9581 74.9581</y_grid>
+    <z_grid>-110.41550000000001 -106.8605 -102.41550000000001 -90.76350000000001 -79.1105 -67.4585 -55.8065 -51.36150000000001 -39.709500000000006 -28.0565 -16.4045 -4.752499999999998 -0.30750000000000455 11.344499999999996 22.997499999999988 34.6495 46.30149999999999 50.74649999999998 60.45549999999999 70.1655 79.8755 89.5845</z_grid>
+  </mesh>
+  <filter id="1" type="mesh">
+    <bins>1</bins>
+  </filter>
+  <filter id="2" type="mesh">
+    <bins>2</bins>
+  </filter>
+  <filter id="3" type="mesh">
+    <bins>3</bins>
+  </filter>
+  <tally id="1" name="rad_pow">
+    <filters>1</filters>
+    <scores>fission</scores>
+  </tally>
+  <tally id="2" name="pin_pow">
+    <filters>2</filters>
+    <scores>fission</scores>
+  </tally>
+  <tally id="3" name="pow_ax">
+    <filters>3</filters>
+    <scores>fission</scores>
+  </tally>
+</tallies>
