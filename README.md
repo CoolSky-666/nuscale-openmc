@@ -58,15 +58,11 @@ This repository helps reproduce/compare selected results of the NuScale benchmar
 
 **Reference 相对误差（Fig.9 / Fig.10 / Fig.11）**
 
-![Err Fig9 Ref](figs/err_fig9_ref.png)
-![Err Fig10 Ref](figs/err_fig10_ref.png)
-![Err Fig11 Ref](figs/err_fig11_ref.png)
+![Err Fig9 Ref](figs/err_fig9_ref.png)![Err Fig10 Ref](figs/err_fig10_ref.png)![Err Fig11 Ref](figs/err_fig11_ref.png)
 
 **CR(RE1 in) 相对误差（Fig.9 / Fig.10 / Fig.11）**
 
-![Err Fig9 CR](./figs/err_fig9_cr.png)
-![Err Fig10 CR](./figs/err_fig10_cr.png)
-![Err Fig11 CR](./figs/err_fig11_cr.png)
+![Err Fig9 CR](./figs/err_fig9_cr.png)![Err Fig11 CR](./figs/err_fig11_cr.png)
 
 ### GitHub 建议
 
