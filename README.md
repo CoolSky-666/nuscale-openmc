@@ -42,7 +42,7 @@ This repository helps reproduce/compare selected results of the NuScale benchmar
 
 相对误差定义：`(calc - ref) / ref * 100%`（`ref` 为 NaN/0 的位置会被屏蔽不绘制）。
 
-### 图像示例
+### 01 图像示例
 
 **Fig.9：径向组件功率分布（Ref/CR）**
 
@@ -50,24 +50,56 @@ This repository helps reproduce/compare selected results of the NuScale benchmar
 
 **Fig.10：轴向功率分布**
 
-![Fig10](https://github.com/CoolSky-666/nuscale-openmc/blob/main/figs/err_fig10_ref.png)
+![Fig10](./figs/fig10-pow_ax.png)
 
 **Fig.11：燃料棒功率分布（Ref/CR）**
 
-![Fig11](figs/fig11-pinpower-ref.png)
+![Fig11](./figs/fig11-pinpower-ref.png)
+
+### 02 run keff
+
+<div align="center">
+  <img src="./core_xy.png" width="48%" alt="fig9" />
+  <img src="./core_xz.png" width="48%" alt="fig11" />
+</div>
+
+### 03 tally
+
+```
+case                statepoint         k-eff    ref_k-eff  rel_err(%)
+------------------  -----------------  -------  ---------  ----------
+All rods out (ARO)  statepoint.300.h5  1.02125  1.02768    -0.62592  
+RE1 in              statepoint.300.h5  0.99819  1.00723    -0.89718  
+RE2 in              statepoint.300.h5  0.99574  1.00313    -0.73718  
+SH3 in              statepoint.300.h5  0.98122  0.98978    -0.86458  
+SH4 in              statepoint.300.h5  0.98126  0.98971    -0.85368  
+All rods in (ARI)   statepoint.300.h5  0.83653  0.85791    -2.49230 
+```
+
+**Fig.9/11：径向组件功率分布(RE1 D5 in)**
+<div align="center">
+  <img src="./figs/t1-ref-rad_pow.png" width="48%" alt="fig9" />
+  <img src="./figs/t2-ref-pin_pow.png" width="48%" alt="fig11" />
+</div>
+
+**Fig.10：轴向功率分布(RE1 D5 in)**
+![Fig10](./figs/t3-refax_pow.png)
+
+
+### 04 ERROR 相对误差
 
 **Reference 相对误差（Fig.9 / Fig.10 / Fig.11）**
-
-![Err Fig9 Ref](figs/err_fig9_ref.png)![Err Fig10 Ref](figs/err_fig10_ref.png)![Err Fig11 Ref](figs/err_fig11_ref.png)
+<div align="center">
+  <img src="figs/err_fig9_ref.png" width="48%" alt="fig9" />
+  <img src="figs/err_fig11_ref.png" width="48%" alt="fig11" />
+</div>
+![Fig10](figs/err_fig10_ref.png)
 
 **CR(RE1 in) 相对误差（Fig.9 / Fig.10 / Fig.11）**
-
-![Err Fig9 CR](./figs/err_fig9_cr.png)![Err Fig11 CR](./figs/err_fig11_cr.png)
-
-### GitHub 建议
-
-- `statepoint.*.h5` 通常较大，建议使用 Git LFS 管理或不要提交到仓库（只提交脚本与必要的参考输入）。
-- 如需公开仓库，请确认 `ref/` 下文件的分发许可（尤其是 PDF/参考解文件）。
+<div align="center">
+  <img src="./figs/err_fig9_cr.png" width="48%" alt="fig9" />
+  <img src="./figs/err_fig11_cr.png" width="48%" alt="fig11" />
+</div>
 
 ---
 
