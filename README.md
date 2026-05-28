@@ -50,7 +50,7 @@ This repository helps reproduce/compare selected results of the NuScale benchmar
 
 **Fig.10：轴向功率分布**
 
-![Fig10](figs/fig10-pow_ax.png)
+![Fig10](https://github.com/CoolSky-666/nuscale-openmc/blob/main/figs/err_fig10_ref.png)
 
 **Fig.11：燃料棒功率分布（Ref/CR）**
 
